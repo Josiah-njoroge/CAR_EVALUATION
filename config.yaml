@@ -1,0 +1,13 @@
+# Project Configuration
+
+# Python environment
+python:
+  version: "3.12"   # Specify the Python version
+  path: "/usr/bin/python3.12"  # Optional: path to Python executable
+
+# Paths
+paths:
+  raw_data: "data/raw/"
+  processed_data: "data/processed/"
+  models: "models/"
+  reports: "reports/"
