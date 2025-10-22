@@ -5,6 +5,7 @@ RAW_DATA_DIR = DATA_DIR / "raw"
 PROCESSED_DATA_DIR = DATA_DIR / "processed"
 SOURCE_DIR = PROJECT_ROOT / "src"
 MODELS_DIR = PROJECT_ROOT / "models"
+TESTS = PROJECT_ROOT / "Tests"
 for path in [DATA_DIR, RAW_DATA_DIR, PROCESSED_DATA_DIR, MODELS_DIR]:
     path.mkdir(parents=True, exist_ok=True)
 CONFIG_PATH = PROJECT_ROOT / "config.yaml"
