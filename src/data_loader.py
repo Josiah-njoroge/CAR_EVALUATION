@@ -65,7 +65,7 @@ def get_data(dataset_id: int, as_frame: bool = True, cache_dir=RAW_DATA_DIR):
 
         # Fetch new data if not cached
         logging.info(f"☑ Fetching dataset ID {dataset_id} from UCI Repository...")
-        dataset = fetch_ucirepo(id=dataset_id, as_frame=as_frame)
+        dataset = fetch_ucirepo(id=dataset_id)
 
         X = dataset.data.features
         y = dataset.data.targets
@@ -93,7 +93,7 @@ if __name__ == "__main__":
         dataset_id = cfg.get("dataset_id", 19)
         as_frame = cfg.get("as_frame", True)
 
-        X, y, metadata, variables = get_data(dataset_id, as_frame)
+        X, y, metadata, variables = get_data(dataset_id=dataset_id)
         logging.info(f"✅ Features preview:\n{X.head()}")
         logging.info(f"✅ Targets preview:\n{y.head()}")
         logging.info(f"📄 Metadata:\n{metadata}")
